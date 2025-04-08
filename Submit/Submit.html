@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="
+width=device-width, initial-scale=1.0">
+<link href="
+https://fonts.googleapis.com/css2?
+family=Work+Sans:wght@400;600;700&display=swap
+" rel="stylesheet">
+<title>FAQ</title>
+<style>
+	body {
+		background-image: url
+    ("../faq-accordion-main/assets/images/background-pattern-desktop.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: right -100px;
+		background-color: hsl(116, 100%, 9%);
+	}
+	.div1 {
+		height: auto;
+		width: 30%;
+		background-color: white;
+		border-radius: 15px;
+		font-size: 16px;
+		font-family: 'Work Sans', sans-serif;
+		color: hsl(292, 42%, 14%);
+		padding: 35px;
+		line-height: 30px;
+		position: relative;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+	h1 {
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	hr {
+		border-top: 0.5px solid hsl(292, 16%, 49%);
+		margin: 15px 0;
+	}
+	p {
+		font-weight: 600;
+	}
+	.star {
+		width: 20px;
+	}
+	.d {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.plus {
+		cursor: pointer;
+		position: absolute;
+		right: 35px;
+		width: 30px;
+	}
+	.plus:hover, .plus.active:hover {
+		transform: scale(1.2) rotate(90deg);
+		transition: 0.3s;
+	}
+	.plus.active {
+		transform: rotate(90deg);
+	}
+	.hidden-text {
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: opacity 0.3s ease, max-height 0.3s ease;
+		display: block;
+	}
+	.hidden-text.active {
+		opacity: 1;
+		max-height: 1000px;
+		transition: opacity 0.3s ease 0.1s, max-height 0.3s ease 0.1s;
+	}
+</style>
+</head>
+<body>
+	<div class="d">
+		<div class="div1">
+			<h1>
+				<img class="star" src="../faq-accordion-main/assets/images/icon-star.svg">
+				FAQs
+			</h1>
+
+			<div class="faq">
+				<div class="question">
+					<p>What is Frontend Mentor, and how will it help me?
+						<img class="plus" src="../faq-accordion-main/assets/images/icon-plus.svg" onclick="toggleAnswer(0)">
+					</p>
+				</div>
+				<p class="hidden-text">Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+				<hr>
+			</div>
+
+			<div class="faq">
+				<div class="question">
+					<p>Is Frontend Mentor free?
+						<img class="plus" src="../faq-accordion-main/assets/images/icon-plus.svg" onclick="toggleAnswer(1)">
+					</p>
+				</div>
+				<p class="hidden-text">Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.</p>
+				<hr>
+			</div>
+
+			<div class="faq">
+				<div class="question">
+					<p>Can I use Frontend Mentor projects in my portfolio?
+						<img class="plus" src="../faq-accordion-main/assets/images/icon-plus.svg" onclick="toggleAnswer(2)">
+					</p>
+				</div>
+				<p class="hidden-text">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!</p>
+				<hr>
+			</div>
+
+			<div class="faq">
+				<div class="question">
+					<p>How can I get help if I'm stuck on a Frontend Mentor challenge?
+						<img class="plus" src="../faq-accordion-main/assets/images/icon-plus.svg" onclick="toggleAnswer(3)">
+					</p>
+				</div>
+				<p class="hidden-text">The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.</p>
+				<hr>
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		function toggleAnswer(index) {
+			let answers = document.querySelectorAll('.hidden-text');
+			let icons = document.querySelectorAll('.plus');
+
+			answers[index].classList.toggle('active');
+			icons[index].classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

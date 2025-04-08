@@ -1,0 +1,46 @@
+body {
+  height: 100vh;
+}
+* {
+  position: relative;
+}
+h1 {
+  margin-left: 600px;
+  margin-top: 10px;
+}
+.firstPhoto {
+  left: 300px;
+  top: 200px;
+  transform: scale(1.5);
+}
+h2 {
+  left: 600px;
+  top: -100px;
+}
+h3 {
+  left: 600px;
+  top: -80px;
+}
+ol {
+  left: 600px;
+  top: -60px;
+  line-height: 50px;
+}
+.b1 {
+  width: 200px;
+  height: 70px;
+  background: linear-gradient(rgb(105, 198, 228), rgb(0, 0, 155));
+  left: 600px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+.b1:hover {
+  width: 250px;
+  height: 87.5px;
+  background: linear-gradient( rgb(0, 0, 155), rgb(105, 198, 228));
+  font-size: xx-large;
+  rotate: 5deg;
+  transition: 0.5s;
+}
